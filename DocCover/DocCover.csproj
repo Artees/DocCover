@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{DC97B8FE-D074-4DB4-9572-9B470902709E}</ProjectGuid>
+        <OutputType>Exe</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>
+        </RootNamespace>
+        <AssemblyName>DocCover</AssemblyName>
+        <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE;SHOULD_ASSERTIONS</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE;SHOULD_ASSERTIONS</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Pack|AnyCPU' ">
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <DefineConstants>TRACE;SHOULD_ASSERTIONS</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <OutputPath>bin\Pack\</OutputPath>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="CommandLine, Version=2.2.1.0, Culture=neutral, PublicKeyToken=de6f01bd326f8c32">
+            <HintPath>..\packages\CommandLineParser.2.2.1\lib\net45\CommandLine.dll</HintPath>
+        </Reference>
+        <Reference Include="ShouldAssertions, Version=1.0.1.37760, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\packages\ShouldAssertions.1.0.1\lib\net35\ShouldAssertions.dll</HintPath>
+        </Reference>
+        <Reference Include="System"/>
+        <Reference Include="System.Console, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+            <HintPath>..\packages\System.Console.4.0.0-rc2-24027\lib\net46\System.Console.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.IO, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+            <HintPath>..\packages\System.IO.4.1.0-rc2-24027\lib\net462\System.IO.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Linq, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+            <HintPath>..\packages\System.Linq.4.1.0-rc2-24027\lib\net462\System.Linq.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Reflection, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+            <HintPath>..\packages\System.Reflection.4.1.0-rc2-24027\lib\net462\System.Reflection.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Reflection.TypeExtensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+            <HintPath>..\packages\System.Reflection.TypeExtensions.4.1.0-rc2-24027\lib\net462\System.Reflection.TypeExtensions.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Runtime, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+            <HintPath>..\packages\System.Runtime.4.1.0-rc2-24027\lib\net462\System.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Runtime.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+            <HintPath>..\packages\System.Runtime.Extensions.4.1.0-rc2-24027\lib\net462\System.Runtime.Extensions.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Xml"/>
+        <Reference Include="XmlDocumentationNameGetter, Version=1.0.4.27523, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\packages\XmlDocumentationNameGetter.1.0.4\lib\net45\XmlDocumentationNameGetter.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Artees\Tools\DocCover\BadgeStyle.cs"/>
+        <Compile Include="Artees\Tools\DocCover\DocCover.cs"/>
+        <Compile Include="Artees\Tools\DocCover\DocCoverMember.cs"/>
+        <Compile Include="Artees\Tools\DocCover\DocCoverReport.cs"/>
+        <Compile Include="Artees\Tools\DocCover\Program.cs"/>
+        <Compile Include="Artees\Tools\DocCover\TypesafeEnum.cs"/>
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="packages.config"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="..\README.md" Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+            <Link>README.md</Link>
+        </Content>
+        <Content Include="DocCover.nuspec" Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "/>
+        <Content Include="PackNuGet.bat" Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "/>
+        <Content Include="PushNuGet.bat" Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "/>
+        <Content Include="MemberTemplate.html" Condition=" '$(Configuration)' != 'Pack' ">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="report.css" Condition=" '$(Configuration)' != 'Pack' ">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="ReportTemplate.html" Condition=" '$(Configuration)' != 'Pack' ">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+           Other similar extension points exist, see Microsoft.Common.targets.
+      <Target Name="BeforeBuild">
+      </Target>
+      <Target Name="AfterBuild">
+      </Target>
+      -->
+</Project>

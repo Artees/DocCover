@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+    <metadata>
+        <id>$id$</id>
+        <title>$id$</title>
+        <authors>$author$</authors>
+        <owners>$author$</owners>
+        <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+        <projectUrl>https://github.com/Artees/DocCover</projectUrl>
+        <iconUrl>https://artees.games/img/icon.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>DocCover calculates the percentage of public members and types in your .NET
+            assembly that have XML comments.
+        </description>
+        <copyright>Copyright © Artees 2018</copyright>
+        <tags>xml documentation comments</tags>
+        <version>1.0.0</version>
+        <releaseNotes>DocCover calculates the percentage of public members and types in your .NET
+            assembly that have XML comments.
+        </releaseNotes>
+    </metadata>
+    <files>
+        <file src="bin\Pack\*.dll" target="tools"/>
+        <file src="*.html" target="tools"/>
+        <file src="*.css" target="tools"/>
+    </files>
+</package>
