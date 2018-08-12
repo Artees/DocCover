@@ -4,7 +4,7 @@
 
 DocCover calculates the percentage of public members and types in your .NET assembly that have 
 XML comments. I just wanted this badge for my repos :3 
-[![Documented](report_example/badge.svg)](report_example/index.html)  
+[![Documented](report_example/badge.svg)](https://htmlpreview.github.io/?https://github.com/Artees/DocCover/blob/master/report_example/index.html)  
 It uses [Shields.io](https://shields.io) to generate a badge.
 
 ## Usage
