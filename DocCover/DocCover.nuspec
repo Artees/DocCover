@@ -1,27 +1,23 @@
 <?xml version="1.0"?>
 <package>
     <metadata>
-        <id>$id$</id>
-        <title>$id$</title>
-        <authors>$author$</authors>
-        <owners>$author$</owners>
+        <id>DocCover</id>
+        <title>DocCover</title>
+        <authors>Artees</authors>
+        <owners>Artees</owners>
         <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
         <projectUrl>https://github.com/Artees/DocCover</projectUrl>
         <iconUrl>https://artees.games/img/icon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>DocCover calculates the percentage of public members and types in your .NET
-            assembly that have XML comments.
+        <description>A .NET Core application that calculates the percentage of public members and
+            types in your .NET assembly that have XML comments.
         </description>
         <copyright>Copyright © Artees 2018</copyright>
         <tags>xml documentation comments</tags>
-        <version>1.0.0</version>
-        <releaseNotes>DocCover calculates the percentage of public members and types in your .NET
-            assembly that have XML comments.
-        </releaseNotes>
+        <version>1.1.0</version>
+        <releaseNotes>Ported to .NET Core.</releaseNotes>
     </metadata>
     <files>
-        <file src="bin\Pack\*.dll" target="tools"/>
-        <file src="*.html" target="tools"/>
-        <file src="*.css" target="tools"/>
+        <file src="bin\Pack\netcoreapp2.1\*.*" target="tools"/>
     </files>
 </package>

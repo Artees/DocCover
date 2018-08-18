@@ -1,5 +1,5 @@
 ﻿using Artees.Diagnostics.BDD;
-using NUnit.Framework;
+using Xunit;
 
 namespace DocCoverTest
 {
@@ -7,12 +7,12 @@ namespace DocCoverTest
     {
         public override void LogError(string message)
         {
-            Assert.Fail(message);
+            Assert.False(true, message);
         }
 
         public override void LogPending(string message)
         {
-            Assert.Ignore(message);
+            Assert.False(true, message);
         }
     }
 }

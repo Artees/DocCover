@@ -2,13 +2,13 @@
 [![GitHub release](https://img.shields.io/github/release/Artees/DocCover.svg?style=flat-square)](https://github.com/Artees/DocCover/releases)
 [![NuGet](https://img.shields.io/nuget/v/DocCover.svg?style=flat-square)](https://www.nuget.org/packages/DocCover/)
 
-DocCover calculates the percentage of public members and types in your .NET assembly that have 
-XML comments. I just wanted this badge for my repos :3 
+A .NET Core application that calculates the percentage of public members and types in your 
+.NET assembly that have XML comments. I just wanted this badge for my repos :3 
 [![Documented](report_example/badge.svg)](https://htmlpreview.github.io/?https://github.com/Artees/DocCover/blob/master/report_example/index.html)  
 It uses [Shields.io](https://shields.io) to generate a badge.
 
 ## Usage
-`path\to\DocCover.exe path\to\docs.xml`
+`dotnet path\to\DocCover.dll path\to\docs.xml`
 
 Command line arguments:
 
