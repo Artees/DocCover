@@ -28,15 +28,15 @@
         <Content Include="..\README.md" Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
             <Link>README.md</Link>
         </Content>
-        <Content Include="MemberTemplate.html" Condition=" '$(Configuration)' != 'Pack' ">
+        <Content Include="MemberTemplate.html">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
         <None Remove="report.css"/>
-        <Content Include="report.css" Condition=" '$(Configuration)' != 'Pack' ">
+        <Content Include="report.css">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
         <None Remove="ReportTemplate.html"/>
-        <Content Include="ReportTemplate.html" Condition=" '$(Configuration)' != 'Pack' ">
+        <Content Include="ReportTemplate.html">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
         <None Remove="DocCover.nuspec"/>
