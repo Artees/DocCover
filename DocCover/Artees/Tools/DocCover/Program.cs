@@ -50,7 +50,8 @@ namespace Artees.Tools.DocCover
         {
             foreach (var error in errors)
             {
-                if (error.Tag == ErrorType.HelpRequestedError) continue;
+                if (error.Tag == ErrorType.HelpRequestedError ||
+                    error.Tag == ErrorType.VersionRequestedError) continue;
                 ShouldAssertions.Fail(error.ToString());
             }
         }
@@ -95,7 +96,6 @@ namespace Artees.Tools.DocCover
             public string StyleValue { private get; set; }
 
             public string Style => StyleOption ?? StyleValue ?? "flat";
-            // ReSharper restore UnusedAutoPropertyAccessor.Local, MemberCanBePrivate.Local
         }
     }
 }
