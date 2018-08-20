@@ -1,0 +1,12 @@
+language: csharp
+mono: none
+dotnet: 2.1.400
+solution: DocCover.sln
+install:
+- dotnet restore
+- dotnet tool install coveralls.net --version 1.0.0 --tool-path tools
+script:
+- dotnet build
+- dotnet test DocCoverTest/DocCoverTest.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+after_script:
+- ./tools/csmacnz.Coveralls --opencover -i DocCoverTest/coverage.opencover.xml
