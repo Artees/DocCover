@@ -3,7 +3,7 @@
 [![NuGet](https://img.shields.io/nuget/v/DocCover.svg)](https://www.nuget.org/packages/DocCover/)
 &nbsp;&nbsp;&nbsp;&nbsp;
 [![Build Status](https://travis-ci.org/Artees/DocCover.svg?branch=master)](https://travis-ci.org/Artees/DocCover)
-[![Coverage Status](https://coveralls.io/repos/github/Artees/DocCover/badge.svg?branch=)](https://coveralls.io/github/Artees/DocCover?branch=)
+[![codecov](https://codecov.io/gh/Artees/DocCover/branch/master/graph/badge.svg)](https://codecov.io/gh/Artees/DocCover)
 [![CodeFactor](https://www.codefactor.io/repository/github/artees/doccover/badge)](https://www.codefactor.io/repository/github/artees/doccover)
 
 A .NET Core application that calculates the percentage of public members and types in your 
